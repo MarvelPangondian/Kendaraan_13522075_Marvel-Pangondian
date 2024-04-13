@@ -19,7 +19,7 @@ public class Bus extends Kendaraan {
     }
 
     @Override
-    public int biayaSewa(int lamaSewa) {
+    public double biayaSewa(int lamaSewa) {
         return 1000 * lamaSewa;
     }
 }

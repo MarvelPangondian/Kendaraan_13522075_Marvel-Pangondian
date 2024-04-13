@@ -20,7 +20,7 @@ public class Mobil extends Kendaraan {
     }
 
     @Override
-    public int biayaSewa(int lamaSewa) {
+    public double biayaSewa(int lamaSewa) {
         return 500 * lamaSewa;
     }
 }

@@ -1,6 +1,7 @@
 // Main untuk testing
 public class Main {
     public static void main(String[] args) {
+        System.out.println("=============================================================");
         // Creating instances of Bus, Minibus, and Mobil
         Bus bus = new Bus(101, "Volvo", 2020, 50);
         Minibus minibus = new Minibus(102, "Toyota", 2019);
@@ -18,7 +19,7 @@ public class Main {
         koleksi.printAll();
 
         // Demonstrate the functionality of the Minibus discount method
-        System.out.println("Biaya sewa Minibus untuk 5 hari: " + minibus.biayaSewa(5));
+        System.out.println("Biaya sewa Minibus untuk 5 hari: " + minibus.biayaSewa(10));
         System.out.println("Biaya sewa Minibus untuk 12 hari: " + minibus.biayaSewa(12));
         System.out.println("Diskon Minibus untuk 12 hari: " + minibus.diskon(12));
     }

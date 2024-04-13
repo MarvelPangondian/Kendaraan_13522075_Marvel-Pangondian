@@ -6,6 +6,7 @@ public abstract class Kendaraan {
     protected int tahunKeluaran;
     protected String kategori;
 
+    // default constructor
     public Kendaraan(){
         this.nomor = 0;
         this.tahunKeluaran = 0;
@@ -13,6 +14,7 @@ public abstract class Kendaraan {
         this.kategori = "Mobil";
     }
 
+    // User defined constructor
     public Kendaraan(int nomor, String merk, int tahunKeluaran, String kategori) {
         this.nomor = nomor;
         this.merk = merk;
@@ -20,6 +22,14 @@ public abstract class Kendaraan {
         this.kategori = kategori;
     }
 
+    // copy constructor
+    public Kendaraan(Kendaraan origin){
+        this.nomor = origin.nomor;
+        this.merk = origin.merk;
+        this.tahunKeluaran = origin.tahunKeluaran;
+        this.kategori = origin.kategori;
+    }
+
     public abstract void printInfo();
-    public abstract int biayaSewa(int lamaSewa);
+    public abstract double biayaSewa(int lamaSewa);
 }
