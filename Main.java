@@ -43,7 +43,18 @@ public class Main {
         System.out.println("Biaya sewa bus selama 2 hari : " + bus1.biayaSewa(2));
         System.out.println("Biaya sewa minibus 5 hari : " + mini1.biayaSewa(5));
         System.out.println("Biaya sewa minibus 10 hari : " + mini1.biayaSewa(10));
-        System.out.println("Biaya sewa minibus 11 hari (setelah diskon) : " + mini1.biayaSewa(11));
+        System.out.println("Biaya sewa minibus 11 hari (tanpa diskon) : " + mini1.biayaSewa(11));
+        System.out.println("Biaya sewa minibus 11 hari (dengan diskon) : " + mini1.biayaDenganDiskon(11));
         System.out.println("Biaya sewa Mobil setelah 5 hari : " + mobil1.biayaSewa(5));
+        
+        System.out.println("List Koleksi dengan copy constructor =====================================================================");
+        // copy koleksi kendaraan
+        KoleksiKendaraan listKoleksi2 = new KoleksiKendaraan(listKoleksi);
+        listKoleksi2.printAll();
+
+        // addListKendaraan, pengganti operator<<(KoleksiKendaraan)
+        listKoleksi2.addListKendaraan(listKoleksi2);
+        System.out.println("List koleksi setelah memasukan elemen list lain =========================================================");
+        listKoleksi2.printAll();
     }
 }

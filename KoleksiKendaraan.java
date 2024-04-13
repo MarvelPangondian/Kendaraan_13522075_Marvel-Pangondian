@@ -55,7 +55,7 @@ public class KoleksiKendaraan {
     public void addListKendaraan(KoleksiKendaraan origin){
         int origin_start = 0;
         // fit kendaraan from origin as much as it can
-        for (int i = this.neff ; i < this.size ; i++){
+        for (int i = this.neff ; i < this.size || i != origin.neff ; i++){
             this.kendaraanList[i] = origin.kendaraanList[origin_start];
             this.neff++;
             origin_start++;
