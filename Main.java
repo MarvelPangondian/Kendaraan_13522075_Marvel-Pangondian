@@ -1,26 +1,49 @@
 // Main untuk testing
 public class Main {
     public static void main(String[] args) {
-        System.out.println("=============================================================");
-        // Creating instances of Bus, Minibus, and Mobil
-        Bus bus = new Bus(101, "Volvo", 2020, 50);
-        Minibus minibus = new Minibus(102, "Toyota", 2019);
-        Mobil mobil = new Mobil(103, "Honda", 2018, "John Doe");
 
-        // Create a collection for vehicles
-        KoleksiKendaraan koleksi = new KoleksiKendaraan();
+        // KoleksiKendaraan
+        KoleksiKendaraan listKoleksi = new KoleksiKendaraan(1);
 
-        // Add vehicles to the collection
-        koleksi.addKendaraan(bus);
-        koleksi.addKendaraan(minibus);
-        koleksi.addKendaraan(mobil);
 
-        // Print information about all vehicles
-        koleksi.printAll();
+        // Default constructors
+        Bus bus1  = new Bus();
+        Minibus mini1 =  new Minibus();
+        Mobil mobil1 = new Mobil();
+        listKoleksi.addKendaraan(bus1);
+        listKoleksi.addKendaraan(mini1);
+        listKoleksi.addKendaraan(mobil1);
+        System.out.println("Test 1===============================================================================");
+        listKoleksi.printAll();
 
-        // Demonstrate the functionality of the Minibus discount method
-        System.out.println("Biaya sewa Minibus untuk 5 hari: " + minibus.biayaSewa(10));
-        System.out.println("Biaya sewa Minibus untuk 12 hari: " + minibus.biayaSewa(12));
-        System.out.println("Diskon Minibus untuk 12 hari: " + minibus.diskon(12));
+
+        // user defined constructors
+        Bus bus2 = new Bus("Love bus", 2020,100);
+        Minibus mini2 = new Minibus("Mini love", 2000);
+        Mobil mobil2 = new Mobil("Love Mobil",1990,"Marvel Pangondian");
+        listKoleksi.addKendaraan(bus2);
+        listKoleksi.addKendaraan(mini2);
+        listKoleksi.addKendaraan(mobil2);
+        System.out.println("Test 2===============================================================================");
+        listKoleksi.printAll();
+
+
+        // Copy constructor
+        Bus bus3 = new Bus(bus2);
+        Minibus mini3 = new Minibus(mini2);
+        Mobil mobil3 = new Mobil(mobil2);
+        listKoleksi.addKendaraan(bus3);
+        listKoleksi.addKendaraan(mini3);
+        listKoleksi.addKendaraan(mobil3);
+        System.out.println("Test 3===============================================================================");
+        listKoleksi.printAll();
+
+
+        System.out.println("Biaya sewa  (dalam ribuan) ===============================================================================");
+        System.out.println("Biaya sewa bus selama 2 hari : " + bus1.biayaSewa(2));
+        System.out.println("Biaya sewa minibus 5 hari : " + mini1.biayaSewa(5));
+        System.out.println("Biaya sewa minibus 10 hari : " + mini1.biayaSewa(10));
+        System.out.println("Biaya sewa minibus 11 hari (setelah diskon) : " + mini1.biayaSewa(11));
+        System.out.println("Biaya sewa Mobil setelah 5 hari : " + mobil1.biayaSewa(5));
     }
 }

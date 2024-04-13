@@ -1,13 +1,29 @@
 
 // Kelas minibus
 public class Minibus extends Kendaraan {
-    public Minibus(int nomor, String merk, int tahunKeluaran) {
-        super(nomor, merk, tahunKeluaran, "Minibus");
+
+    // Default constructor
+    public Minibus(){
+        super();
+        this.kategori = "Minibus";
+    }
+    
+    // User defined constructor
+    public Minibus(String merk, int tahunKeluaran) {
+        super(merk, tahunKeluaran, "Minibus");
+    }
+
+    // Copy constructor
+    public Minibus(Minibus origin){
+        super(); 
+        this.merk = origin.merk;
+        this.tahunKeluaran = origin.tahunKeluaran;
+        this.kategori = "Minibus";
     }
 
     @Override
     public void printInfo() {
-        System.out.println("Minibus: " + merk + ", Tahun: " + tahunKeluaran);
+        System.out.println("Minibus: " + merk + ", Nomor: " + this.nomor + ", Tahun: " + tahunKeluaran);
     }
 
     @Override
