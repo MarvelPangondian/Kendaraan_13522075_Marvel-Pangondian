@@ -6,6 +6,13 @@ public abstract class Kendaraan {
     protected int tahunKeluaran;
     protected String kategori;
 
+    public Kendaraan(){
+        this.nomor = 0;
+        this.tahunKeluaran = 0;
+        this.merk = "XXX";
+        this.kategori = "Mobil";
+    }
+
     public Kendaraan(int nomor, String merk, int tahunKeluaran, String kategori) {
         this.nomor = nomor;
         this.merk = merk;
