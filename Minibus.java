@@ -16,6 +16,7 @@ public class Minibus extends Kendaraan {
     // Copy constructor
     public Minibus(Minibus origin){
         super(); 
+        this.nomor = origin.nomor;
         this.merk = origin.merk;
         this.tahunKeluaran = origin.tahunKeluaran;
         this.kategori = "Minibus";

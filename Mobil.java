@@ -19,6 +19,7 @@ public class Mobil extends Kendaraan {
     // Copy constructor
     public Mobil(Mobil origin){
         super();
+        this.nomor = origin.nomor;
         this.merk = origin.merk;
         this.tahunKeluaran = origin.tahunKeluaran;
         this.supir = origin.supir;

@@ -18,6 +18,7 @@ public class Bus extends Kendaraan {
     // Copy constructor
     public Bus(Bus origin){
         super();
+        this.nomor = origin.nomor;
         this.merk = origin.merk;
         this.tahunKeluaran = origin.tahunKeluaran;
         this.kapasitas = origin.kapasitas;
