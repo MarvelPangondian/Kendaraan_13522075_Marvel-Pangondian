@@ -18,9 +18,9 @@ public class Main {
 
 
         // user defined constructors
-        Bus bus2 = new Bus("Love bus", 2020,100);
-        Minibus mini2 = new Minibus("Mini love", 2000);
-        Mobil mobil2 = new Mobil("Love Mobil",1990,"Marvel Pangondian");
+        Bus bus2 = new Bus(20,"Love bus", 2020,100);
+        Minibus mini2 = new Minibus(199, "Mini love", 2000);
+        Mobil mobil2 = new Mobil(99,"Love Mobil",1990,"Marvel Pangondian");
         listKoleksi.addKendaraan(bus2);
         listKoleksi.addKendaraan(mini2);
         listKoleksi.addKendaraan(mobil2);

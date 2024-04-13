@@ -5,33 +5,31 @@ public abstract class Kendaraan {
     protected String merk;
     protected int tahunKeluaran;
     protected String kategori;
-    protected static int kendaraan_count = 0;
+
 
     // default constructor
     public Kendaraan(){
-        this.nomor = kendaraan_count ;
+        this.nomor = 0;
         this.tahunKeluaran = 0;
         this.merk = "XXX";
         this.kategori = "Mobil";
-        kendaraan_count++;
+
     }
 
     // User defined constructor
-    public Kendaraan(String merk, int tahunKeluaran, String kategori) {
-        this.nomor = kendaraan_count;
+    public Kendaraan(int nomor, String merk, int tahunKeluaran, String kategori) {
+        this.nomor = nomor;
         this.merk = merk;
         this.tahunKeluaran = tahunKeluaran;
         this.kategori = kategori;
-        kendaraan_count++;
     }
 
     // copy constructor
     public Kendaraan(Kendaraan origin){
-        this.nomor = kendaraan_count;
+        this.nomor = origin.nomor;
         this.merk = origin.merk;
         this.tahunKeluaran = origin.tahunKeluaran;
         this.kategori = origin.kategori;
-        kendaraan_count++;
     }
 
     public abstract void printInfo();

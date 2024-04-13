@@ -9,8 +9,8 @@ public class Minibus extends Kendaraan {
     }
     
     // User defined constructor
-    public Minibus(String merk, int tahunKeluaran) {
-        super(merk, tahunKeluaran, "Minibus");
+    public Minibus(int nomor, String merk, int tahunKeluaran) {
+        super(nomor, merk, tahunKeluaran, "Minibus");
     }
 
     // Copy constructor

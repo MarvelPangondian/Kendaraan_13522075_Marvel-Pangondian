@@ -10,8 +10,8 @@ public class Bus extends Kendaraan {
     }
 
     // User defined constructor
-    public Bus(String merk, int tahunKeluaran, int kapasitas) {
-        super(merk, tahunKeluaran, "Bus");
+    public Bus(int nomor, String merk, int tahunKeluaran, int kapasitas) {
+        super(nomor, merk, tahunKeluaran, "Bus");
         this.kapasitas = kapasitas;
     }
 

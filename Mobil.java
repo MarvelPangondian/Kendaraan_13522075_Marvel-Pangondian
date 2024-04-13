@@ -10,8 +10,8 @@ public class Mobil extends Kendaraan {
     }
 
     // User defined constructor
-    public Mobil(String merk, int tahunKeluaran, String supir) {
-        super(merk, tahunKeluaran, "Mobil");
+    public Mobil(int nomor, String merk, int tahunKeluaran, String supir) {
+        super(nomor, merk, tahunKeluaran, "Mobil");
         this.supir = supir;
         
     }
